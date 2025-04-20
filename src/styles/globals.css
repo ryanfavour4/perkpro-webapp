@@ -1,0 +1,193 @@
+@import url("https://db.onlinewebfonts.com/c/73c00071d90ecfb78bf0ccdeda529307?family=Nico+Moji");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+:root {
+    --dark: 26, 26, 26; /* #1A1A1A */
+    --dark-50: 112, 112, 112; /* #707070 */
+    --dark-100: 26, 26, 26; /* #1A1A1A */
+    --dark-200: 0, 0, 0; /* #000000 */
+    --light: 255, 255, 255; /* #FFFFFF */
+    --light-100: 255, 255, 255; /* #FFFFFF */
+    --light-200: 245, 245, 245; /* #F5F5F5 */
+    --primary: 4, 21, 254; /* #0415FE */
+    --primary-100: 4, 21, 254; /* #0415FE */
+    --primary-200: 1, 11, 152; /* #010B98 */
+    --secondary: 255, 193, 7; /* #FFC107 */
+    --secondary-100: 255, 193, 7; /* #FFC107 */
+    --text: 27, 28, 22; /* #1B1C16 */
+    --grey: 217, 217, 217; /* #D9D9D9 */
+    --grey-100: 148, 148, 172; /* #9494AC */
+    --error: 255, 122, 104; /* #FF7A68 */
+    --warning: 255, 255, 0; /* #ffff00 */
+    --success: 79, 191, 103; /* #4FBF67 */
+    --info: 0, 0, 255; /* #0000ff */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    transition: all 0.1s ease;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+    width: 5px;
+    scrollbar-width: "thin";
+}
+
+*::-webkit-scrollbar-track {
+    background: rgba(var(--light));
+}
+
+*::-webkit-scrollbar-thumb {
+    background: rgba(var(--primary-rgb) / 0.4);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: rgba(var(--primary-rgb) / 0.6);
+}
+
+html.light {
+    --dark: 26, 26, 26; /* #1A1A1A */
+    --dark-50: 112, 112, 112; /* #707070 */
+    --dark-100: 26, 26, 26; /* #1A1A1A */
+    --dark-200: 0, 0, 0; /* #000000 */
+    --light: 255, 255, 255; /* #FFFFFF */
+    --light-100: 255, 255, 255; /* #FFFFFF */
+    --light-200: 245, 245, 245; /* #F5F5F5 */
+    --primary: 4, 21, 254; /* #0415FE */
+    --primary-100: 4, 21, 254; /* #0415FE */
+    --primary-200: 1, 11, 152; /* #010B98 */
+    --secondary: 255, 193, 7; /* #FFC107 */
+    --secondary-100: 255, 193, 7; /* #FFC107 */
+    --text: 27, 28, 22; /* #1B1C16 */
+    --grey: 217, 217, 217; /* #D9D9D9 */
+    --grey-100: 148, 148, 172; /* #9494AC */
+    --error: 255, 122, 104; /* #FF7A68 */
+    --warning: 255, 255, 0; /* #ffff00 */
+    --success: 79, 191, 103; /* #4FBF67 */
+    --info: 0, 0, 255; /* #0000ff */
+}
+
+html.dark {
+    --dark: 26, 26, 26; /* #1A1A1A */
+    --dark-50: 112, 112, 112; /* #707070 */
+    --dark-100: 26, 26, 26; /* #1A1A1A */
+    --dark-200: 0, 0, 0; /* #000000 */
+    --light: 255, 255, 255; /* #FFFFFF */
+    --light-100: 255, 255, 255; /* #FFFFFF */
+    --light-200: 245, 245, 245; /* #F5F5F5 */
+    --primary: 4, 21, 254; /* #0415FE */
+    --primary-100: 4, 21, 254; /* #0415FE */
+    --primary-200: 1, 11, 152; /* #010B98 */
+    --secondary: 255, 193, 7; /* #FFC107 */
+    --secondary-100: 255, 193, 7; /* #FFC107 */
+    --text: 27, 28, 22; /* #1B1C16 */
+    --grey: 217, 217, 217; /* #D9D9D9 */
+    --grey-100: 148, 148, 172; /* #9494AC */
+    --error: 255, 122, 104; /* #FF7A68 */
+    --warning: 255, 255, 0; /* #ffff00 */
+    --success: 79, 191, 103; /* #4FBF67 */
+    --info: 0, 0, 255; /* #0000ff */
+}
+
+html {
+    overflow-x: hidden;
+    overflow-y: auto;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    background: rgba(var(--light-300));
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: rgba(var(--text));
+}
+
+html[class] body {
+    display: block;
+}
+
+#root {
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-size: 15px;
+}
+.font-poppins {
+    font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.header-font,
+.font-open-sans {
+    font-family: "Open Sans", sans-serif;
+}
+
+.font-nico-moji {
+    font-family: "Nico Moji";
+}
+
+button:disabled {
+    cursor: not-allowed !important;
+    opacity: 0.6 !important;
+}
+
+/* Remove Chrome's default autofill background color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px transparent inset !important;
+    -webkit-text-fill-color: rgba(var(--text)) !important;
+    transition: background-color 5000s ease-in-out 0s;
+    background-color: transparent !important;
+}
+
+.wrapper,
+.container {
+    width: 98%;
+    max-width: 1250px;
+    margin: auto;
+    height: 100%;
+}
+
+.sub-header {
+    position: relative;
+}
+
+.sub-header::before {
+    content: "";
+    top: 50%;
+    left: -45px;
+    position: absolute;
+    width: 40px;
+    height: 1.5px;
+    background: rgba(var(--text));
+    display: block;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 650px) {
+    body {
+        font-size: 14px;
+    }
+
+    .sub-header::before {
+        left: -25%;
+        width: 30px;
+    }
+}

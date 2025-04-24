@@ -14,10 +14,11 @@ export default function Home() {
                     </div>
                     <div className="grid grid-cols-10 gap-5 overflow-hidden md:col-span-9 lg:col-span-10">
                         <div className="col-span-7">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit. Cupiditate libero nostrum debitis, temporibus
-                            aliquid eum illo non dolore suscipit animi impedit
-                            laborum ex illum at et est incidunt ut veritatis?
+                            <div className="my-5">
+                                <h1 className="text-2xl font-bold text-light-900">
+                                    Welcome back, John Doe
+                                </h1>
+                            </div>
                         </div>
                         {/*  */}
                         <div className="col-span-3">

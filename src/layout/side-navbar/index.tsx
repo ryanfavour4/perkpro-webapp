@@ -56,7 +56,7 @@ export default function SideNavbar() {
             isActive: false,
         },
         {
-            path: "/login/#",
+            path: "/tenant/login/#",
             icon: <LogoutDoorFill className="text-lg" />,
             title: "Logout",
             isActive: false,

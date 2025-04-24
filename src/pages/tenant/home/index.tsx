@@ -7,6 +7,8 @@ import HomeHouseCards, {
     MockHouseCardData,
 } from "@/components/home-house-cards";
 import emptyBoxGif from "@/assets/images/empty-box-web.gif";
+import pwanLogo from "@/assets/images/pwan-logo.png";
+import { Link } from "react-router-dom";
 
 export default function Home() {
     const { theme } = useTheme();
@@ -22,7 +24,7 @@ export default function Home() {
                     <div className="h-full min-h-screen overflow-y-auto md:col-span-3 lg:col-span-2">
                         <SideNavbar />
                     </div>
-                    <div className="grid grid-cols-10 gap-5 overflow-hidden md:col-span-9 lg:col-span-10">
+                    <div className="grid grid-cols-10 gap-5 overflow-hidden md:col-span-9 lg:col-span-10 pb-5">
                         <div className="col-span-7">
                             <div className="my-5">
                                 <h1 className="text-lg font-bold">
@@ -49,6 +51,7 @@ export default function Home() {
 
                             <NewPropertiesAround />
                             <PropertiesForRent />
+                            <RealEstateCompaniesAndAgents />
                         </div>
                         {/*  */}
                         <div className="col-span-3 border-l-2 px-2">
@@ -116,7 +119,7 @@ export default function Home() {
             </main>
 
             {/* MOBILE div */}
-            <section className="container block px-2 md:hidden">
+            <section className="container block px-2 md:hidden pb-5">
                 <div className="col-span-7">
                     <div className="my-5">
                         <h1 className="text-lg font-bold">Welcome, John Doe</h1>
@@ -141,6 +144,7 @@ export default function Home() {
 
                     <NewPropertiesAround />
                     <PropertiesForRent />
+                    <RealEstateCompaniesAndAgents />
                 </div>
 
                 {/* BOTTOM TAB BAR */}
@@ -203,7 +207,7 @@ export function PropertiesForRent() {
                 <div className="border-b-2 border-dark-50 mb-5">
                     <div className="px-6 bg-dark-50 w-fit py-2 rounded-t-xl">
                         <h4 className="text-light-100 font-semibold text-sm">
-                            New Properties around you
+                            Properties For Rent{" "}
                         </h4>
                     </div>
                 </div>
@@ -235,6 +239,59 @@ export function PropertiesForRent() {
                         </div>
                     )}
                 </div>
+            </div>
+        </>
+    );
+}
+
+export function RealEstateCompaniesAndAgents() {
+    return (
+        <>
+            <div className="mt-16">
+                <div className="border-b-2 border-dark-50 mb-5">
+                    <div className="px-6 bg-dark-50 w-fit py-2 rounded-t-xl">
+                        <h4 className="text-light-100 font-semibold text-sm">
+                            Real Estate Companies/Agents{" "}
+                        </h4>
+                    </div>
+                </div>
+
+                {/* //TODO: New Properties around you */}
+                <div className="flex justify-between gap-3 overflow-x-auto md:gap-6">
+                    {MockHouseCardData?.length > 0 ? (
+                        MockHouseCardData?.map(() => (
+                            <div className="h-40 min-w-40 aspect-square mx-2 bg-light-100 shadow p-3 rounded-lg border overflow-hidden border-dark-50/25 flex flex-col items-center justify-center">
+                                <img
+                                    className="h-28 w-[7rem] aspect-square object-contain"
+                                    src={pwanLogo}
+                                />
+                            </div>
+                        ))
+                    ) : (
+                        <div className="pb-6 flex-1 flex gap-3 flex-col justify-center items-center">
+                            <img
+                                src={emptyBoxGif}
+                                style={{
+                                    width: 200,
+                                    height: 200,
+                                }}
+                            />
+                            <p
+                                className="text-base font-semibold"
+                                style={{ marginTop: -35 }}
+                            >
+                                No Properties Found
+                            </p>
+                        </div>
+                    )}
+                </div>
+
+                <Link
+                    className="btn text-sm font-normal mx-auto mt-5 text-center w-fit hover:shadow-none hover:border-none hover:ring-0"
+                    to={"/"}
+                >
+                    Search for more Mompanies/Agents
+                </Link>
             </div>
         </>
     );

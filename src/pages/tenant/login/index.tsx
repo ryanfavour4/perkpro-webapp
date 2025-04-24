@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import authIllustrationLight from "@/assets/auth-illustration-light.png";
+import authIllustration from "@/assets/images/logo-dark.png";
 import Logo from "@/components/svg/logo";
 import Input from "@/components/input";
 import Mail from "@/components/svg/mail";
 import Checkbox from "@/components/checkbox";
-import GoogleLogoColoured from "@/components/svg/google-logo-coloured";
 import { IInputState } from "@/components/input/useInput";
+import CustomerSupport from "@/components/svg/customer-support";
 
-export default function Login() {
+export default function TenantLogin() {
     const [email, setEmail] = useState<IInputState>({ value: "" });
     const [password, setPassword] = useState<IInputState>({ value: "" });
 
@@ -20,15 +20,9 @@ export default function Login() {
     return (
         <>
             <div className="relative min-h-screen bg-light-300">
-                <div className="absolute left-0 top-0 -z-0 hidden h-96 w-96 animate-pulse rounded-full bg-[radial-gradient(circle,rgba(var(--primary),0.6),rgba(var(--accent),0.3))] blur-3xl backdrop-blur-3xl transition-all md:inline" />
-                <div className="absolute -bottom-24 right-0 z-0 hidden h-96 w-96 animate-float rounded-full bg-[radial-gradient(circle,rgba(var(--primary),0.6),rgba(var(--accent),0.3))] blur-3xl backdrop-blur-3xl transition-all md:inline" />
-
                 <div className="container px-4 py-4 md:px-0">
-                    <div className="mx-auto flex w-fit flex-col items-center justify-center md:mx-0 md:ml-auto">
-                        <Logo className="h-full max-h-10 w-full max-w-40" />
-                        <p className="font-nico-moji text-sm font-bold text-dark md:text-2xl">
-                            APEX 2.0
-                        </p>
+                    <div className="mx-auto flex w-fit flex-col items-center justify-center md:mx-0">
+                        <Logo className="h-full max-h-16 w-full max-w-48" />
                     </div>
                 </div>
 
@@ -41,13 +35,9 @@ export default function Login() {
                             >
                                 <div className="mb-4 flex flex-col items-center justify-center gap-2 text-center">
                                     <h3 className="text-2xl font-bold text-dark">
-                                        Welcome Back
+                                        Login
                                     </h3>
-                                    <p>
-                                        Apex 2.0: Your All-in-One AI-Powered
-                                        Crypto Investment Hub - Trade Smarter,
-                                        Safer, and in Real-Time.
-                                    </p>
+                                    <p>Welcome, please login to your account</p>
                                 </div>
 
                                 <div className="mt-12 flex flex-col gap-4">
@@ -85,7 +75,7 @@ export default function Login() {
                                         Login
                                     </button>
                                     <p>
-                                        Don't have an account ?{" "}
+                                        Don't have an account with us yet?{" "}
                                         <Link
                                             to={"/register"}
                                             className="cursor-pointer text-primary"
@@ -97,7 +87,7 @@ export default function Login() {
                                     <div className="mt-12 flex flex-col items-center justify-center gap-2 text-sm">
                                         <div className="flex w-full items-center justify-center gap-2 text-dark">
                                             <hr className="w-1/4" />
-                                            Or Sign In With
+                                            Contact support
                                             <hr className="w-1/4" />
                                         </div>
                                         <div className="flex gap-2">
@@ -105,7 +95,7 @@ export default function Login() {
                                                 type="button"
                                                 className="btn"
                                             >
-                                                <GoogleLogoColoured className="h-8 w-8" />
+                                                <CustomerSupport className="h-8 w-8 text-primary-100" />
                                             </button>
                                         </div>
                                     </div>
@@ -115,7 +105,7 @@ export default function Login() {
 
                         <div className="relative col-span-5 hidden items-center justify-center md:flex">
                             <img
-                                src={authIllustrationLight}
+                                src={authIllustration}
                                 className="w-4/5 animate-float"
                                 alt="authentication"
                             />

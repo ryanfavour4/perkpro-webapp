@@ -1,5 +1,6 @@
 import "@/styles/globals.css";
 import "@/styles/tailwind.css";
+import "react-phone-input-2/lib/style.css";
 import Router from "./routes/routes";
 import { Toaster } from "react-hot-toast";
 import { BrowserRouter } from "react-router-dom";

@@ -16,6 +16,7 @@ export default function Router() {
             <Suspense fallback={<LoadingPopUp />}>
                 <Routes>
                     <Route path="/" element={<HomeTenant />} />
+                    <Route path="tenant/home" element={<HomeTenant />} />
                     <Route path="/register" element={<Register />} />
                     <Route path="/tenant/login" element={<TenantLogin />} />
                     <Route

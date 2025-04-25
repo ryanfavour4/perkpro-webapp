@@ -15,7 +15,7 @@ type props = {
         electricity?: string | boolean;
         date?: string;
         link?: string;
-        id: string;
+        id?: string;
     };
 };
 
@@ -188,7 +188,10 @@ export default function HomeHouseCards({ data }: props) {
                 </div>
                 <button
                     onClick={() =>
-                        navigate("/property-details/" + data?.id.split("/")[0])
+                        navigate(
+                            "/property-details/" +
+                                (data.id && +data?.id.split("/")[0])
+                        )
                     }
                     className="btn-primary text-sm"
                 >

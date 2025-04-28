@@ -47,7 +47,7 @@ export function ChatsMainContent() {
                 {/* <!-- Sidebar --> */}
                 <div className="w-1/4 bg-white border-r border-gray-300">
                     {/* <!-- Sidebar Header --> */}
-                    <header className="p-2.5 border-b border-gray-300 flex justify-between items-center bg-indigo-600 text-white">
+                    <header className="p-2.5 border-b border-light-100 flex justify-between items-center bg-primary-100 text-white">
                         <h1 className="text-lg font-semibold">Chat Web</h1>
                         <div className="relative">
                             <button className="btn p-1 ring-light-100">
@@ -215,7 +215,7 @@ export function ChatsMainContent() {
                     </div>
 
                     {/* <!-- Chat Input --> */}
-                    <footer className="bg-white border border-dark-50 p-4 absolute bottom-0 w-full">
+                    <footer className="bg-white border-t border-dark-50 p-4 absolute bottom-0 w-full">
                         <div className="flex items-center">
                             <input
                                 type="text"

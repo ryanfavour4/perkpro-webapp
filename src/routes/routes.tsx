@@ -13,6 +13,7 @@ import Search from "@/pages/tenant/search";
 import SearchResult from "@/pages/tenant/search/search-result";
 import Schedules from "@/pages/tenant/schedules";
 import Wishlist from "@/pages/tenant/wishlist";
+import SearchCompanies from "@/pages/tenant/search/companies";
 
 export default function Router() {
     return (
@@ -31,6 +32,10 @@ export default function Router() {
                     <Route
                         path="/tenant/search/results"
                         element={<SearchResult />}
+                    />
+                    <Route
+                        path="/tenant/search-companies"
+                        element={<SearchCompanies />}
                     />
                     <Route path="/tenant/schedules" element={<Schedules />} />
                     <Route path="/tenant/wishlist" element={<Wishlist />} />

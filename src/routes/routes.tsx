@@ -11,6 +11,8 @@ import Register from "@/pages/auth/register";
 import PropertyDetails from "@/pages/tenant/property-details";
 import Search from "@/pages/tenant/search";
 import SearchResult from "@/pages/tenant/search/search-result";
+import Schedules from "@/pages/tenant/schedules";
+import Wishlist from "@/pages/tenant/wishlist";
 
 export default function Router() {
     return (
@@ -30,6 +32,8 @@ export default function Router() {
                         path="/tenant/search/results"
                         element={<SearchResult />}
                     />
+                    <Route path="/tenant/schedules" element={<Schedules />} />
+                    <Route path="/tenant/wishlist" element={<Wishlist />} />
                     {/* protected route */}
                     <Route element={<ProtectedRoute />}>
                         <Route path="*" element={<NotFound />} />

@@ -19,6 +19,7 @@ import UptrendLine from "@/components/svg/uptrend-line";
 import CalenderScheduleFill from "@/components/svg/calender-schedule-fill";
 import ChatFill from "@/components/svg/chat-fill";
 import NotificationBellFill from "@/components/svg/notification-bell-fill";
+import SearchMicroscopeFill from "@/components/svg/search-microscope-fill";
 
 const generalLinks = [
     {
@@ -44,7 +45,7 @@ const menuLinks = [
     },
     {
         path: "/tenant/search",
-        icon: <SearchMicroscope className="text-xl" />,
+        icon: <SearchMicroscopeFill className="text-xl" />,
         title: "Search",
         isActive: false,
     },

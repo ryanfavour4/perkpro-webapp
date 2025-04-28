@@ -80,6 +80,7 @@ export function ChatsMainContent() {
 
                     {/* <!-- Contact List --> */}
                     <div className="overflow-y-auto h-screen p-3 mb-9 pb-20">
+                        {/* CHAT LIST USERS */}
                         <div className="flex items-center mb-4 cursor-pointer hover:bg-gray-100 p-2 rounded-md">
                             <img
                                 src="https://placehold.co/200x/ffa8e4/ffffff.svg?text=ʕ•́ᴥ•̀ʔ&font=Lato"
@@ -98,6 +99,7 @@ export function ChatsMainContent() {
                             </div>
                         </div>
 
+                        {/* CHAT LIST USERS */}
                         <div className="flex items-center mb-4 cursor-pointer hover:bg-gray-100 p-2 rounded-md">
                             <img
                                 src="https://placehold.co/200x/ffa8e4/ffffff.svg?text=ʕ•́ᴥ•̀ʔ&font=Lato"
@@ -126,7 +128,7 @@ export function ChatsMainContent() {
                     </header>
 
                     {/* <!-- Chat Messages --> */}
-                    <div className="h-screen overflow-y-auto p-4 pb-36">
+                    <div className="h-screen overflow-y-auto p-4 pb-48">
                         {/* <!-- Incoming Message --> */}
                         <div className="flex mb-4 cursor-pointer">
                             <div className="w-9 h-9 rounded-full flex items-center justify-center mr-2">
@@ -145,7 +147,7 @@ export function ChatsMainContent() {
 
                         {/* <!-- Outgoing Message --> */}
                         <div className="flex justify-end mb-4 cursor-pointer">
-                            <div className="flex max-w-96 bg-indigo-500 text-white rounded-lg p-3 gap-3">
+                            <div className="flex max-w-96 bg-primary-100 text-white rounded-lg p-3 gap-3">
                                 <p>
                                     Hi Alice! I'm good, just finished a great
                                     book. How about you?
@@ -177,55 +179,6 @@ export function ChatsMainContent() {
                             </div>
                         </div>
 
-                        {/* <!-- Outgoing Message --> */}
-                        <div className="flex justify-end mb-4 cursor-pointer">
-                            <div className="flex max-w-96 bg-indigo-500 text-white rounded-lg p-3 gap-3">
-                                <p>
-                                    It's about an astronaut stranded on Mars,
-                                    trying to survive. Gripping stuff!
-                                </p>
-                            </div>
-                            <div className="w-9 h-9 rounded-full flex items-center justify-center ml-2">
-                                <img
-                                    src="https://placehold.co/200x/b7a8ff/ffffff.svg?text=ʕ•́ᴥ•̀ʔ&font=Lato"
-                                    alt="My Avatar"
-                                    className="w-8 h-8 rounded-full"
-                                />
-                            </div>
-                        </div>
-                        {/* <!-- Incoming Message --> */}
-                        <div className="flex mb-4 cursor-pointer">
-                            <div className="w-9 h-9 rounded-full flex items-center justify-center mr-2">
-                                <img
-                                    src="https://placehold.co/200x/ffa8e4/ffffff.svg?text=ʕ•́ᴥ•̀ʔ&font=Lato"
-                                    alt="User Avatar"
-                                    className="w-8 h-8 rounded-full"
-                                />
-                            </div>
-                            <div className="flex max-w-96 bg-white rounded-lg p-3 gap-3">
-                                <p className="text-gray-700">
-                                    Hey Bob, how's it going?
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* <!-- Outgoing Message --> */}
-                        <div className="flex justify-end mb-4 cursor-pointer">
-                            <div className="flex max-w-96 bg-indigo-500 text-white rounded-lg p-3 gap-3">
-                                <p>
-                                    Hi Alice! I'm good, just finished a great
-                                    book. How about you?
-                                </p>
-                            </div>
-                            <div className="w-9 h-9 rounded-full flex items-center justify-center ml-2">
-                                <img
-                                    src="https://placehold.co/200x/b7a8ff/ffffff.svg?text=ʕ•́ᴥ•̀ʔ&font=Lato"
-                                    alt="My Avatar"
-                                    className="w-8 h-8 rounded-full"
-                                />
-                            </div>
-                        </div>
-
                         {/* <!-- Incoming Message --> */}
                         <div className="flex mb-4 cursor-pointer">
                             <div className="w-9 h-9 rounded-full flex items-center justify-center mr-2">
@@ -245,7 +198,7 @@ export function ChatsMainContent() {
 
                         {/* <!-- Outgoing Message --> */}
                         <div className="flex justify-end mb-4 cursor-pointer">
-                            <div className="flex max-w-96 bg-indigo-500 text-white rounded-lg p-3 gap-3">
+                            <div className="flex max-w-96 bg-primary-100 text-white rounded-lg p-3 gap-3">
                                 <p>
                                     It's about an astronaut stranded on Mars,
                                     trying to survive. Gripping stuff!
@@ -262,14 +215,14 @@ export function ChatsMainContent() {
                     </div>
 
                     {/* <!-- Chat Input --> */}
-                    <footer className="bg-white border border-gray-300 p-4 absolute bottom-0 w-full">
+                    <footer className="bg-white border border-dark-50 p-4 absolute bottom-0 w-full">
                         <div className="flex items-center">
                             <input
                                 type="text"
                                 placeholder="Type a message..."
-                                className="w-full p-2 rounded-md border border-gray-400 focus:outline-none focus:border-blue-500"
+                                className="w-full p-2 py-3 rounded-md border border-gray-400 focus:outline-none focus:border-primary-100"
                             />
-                            <button className="bg-indigo-500 text-white px-4 py-2 rounded-md ml-2">
+                            <button className="bg-primary-100 text-white px-4 py-3 rounded-md ml-2">
                                 Send
                             </button>
                         </div>

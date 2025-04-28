@@ -7,6 +7,7 @@ import HomeFill from "@/components/svg/home-fill";
 import UptrendLine from "@/components/svg/uptrend-line";
 import CalenderScheduleFill from "@/components/svg/calender-schedule-fill";
 import ChatFill from "@/components/svg/chat-fill";
+import SearchMicroscopeFill from "@/components/svg/search-microscope-fill";
 
 export default function SideNavbar() {
     const menuLinks = [
@@ -14,6 +15,12 @@ export default function SideNavbar() {
             path: "/tenant/home",
             icon: <DashboardSquaresFill className="text-xl" />,
             title: "Home",
+            isActive: false,
+        },
+        {
+            path: "/search",
+            icon: <SearchMicroscopeFill className="text-xl fill-white" />,
+            title: "Search",
             isActive: false,
         },
         {

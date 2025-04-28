@@ -9,6 +9,7 @@ import { LoadingPopUp } from "@/layout/loading";
 import TenantLogin from "@/pages/tenant/login";
 import Register from "@/pages/auth/register";
 import PropertyDetails from "@/pages/tenant/property-details";
+import Search from "@/pages/tenant/search";
 
 export default function Router() {
     return (
@@ -23,6 +24,7 @@ export default function Router() {
                         path="/property-details/:id"
                         element={<PropertyDetails />}
                     />
+                    <Route path="/search" element={<Search />} />
                     {/* protected route */}
                     <Route element={<ProtectedRoute />}>
                         <Route path="*" element={<NotFound />} />

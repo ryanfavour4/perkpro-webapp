@@ -43,6 +43,12 @@ const menuLinks = [
         isActive: false,
     },
     {
+        path: "/search",
+        icon: <SearchMicroscope className="text-xl" />,
+        title: "Search",
+        isActive: false,
+    },
+    {
         path: "/tenant/schedules",
         icon: <CalenderScheduleFill className="text-xl" />,
         title: "Schedules",
@@ -141,6 +147,7 @@ export default function TopNavbar({ title }: { title?: string }) {
                                 <Input
                                     type="text"
                                     name="search"
+                                    onKeyDown={() => navigate("/search")}
                                     autoComplete="on"
                                     className="!rounded-[4rem]"
                                     state={{ value: "" }}

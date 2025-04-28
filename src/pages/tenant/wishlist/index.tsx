@@ -61,7 +61,9 @@ export function WishlistMainContent() {
                     className="size-56 rounded-lg object-cover"
                 />
 
-                <p className="text-center">You currently have no wishlist</p>
+                <p className="text-center">
+                    You currently have no property on your wishlist
+                </p>
             </div>
         </>
     );

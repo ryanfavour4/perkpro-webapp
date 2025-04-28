@@ -18,7 +18,7 @@ export default function SideNavbar() {
             isActive: false,
         },
         {
-            path: "/search",
+            path: "/tenant/search",
             icon: <SearchMicroscopeFill className="text-xl fill-white" />,
             title: "Search",
             isActive: false,

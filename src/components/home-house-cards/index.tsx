@@ -189,7 +189,7 @@ export default function HomeHouseCards({ data }: props) {
                 <button
                     onClick={() =>
                         navigate(
-                            "/property-details/" +
+                            "/tenant/property-details/" +
                                 (data.id && +data?.id.split("/")[0])
                         )
                     }

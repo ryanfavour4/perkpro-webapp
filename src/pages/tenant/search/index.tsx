@@ -171,7 +171,7 @@ export function BuySearchForm() {
 
                 <button
                     className="btn-primary"
-                    onClick={() => navigate("/search/results")}
+                    onClick={() => navigate("/tenant/search/results")}
                 >
                     Search
                 </button>
@@ -245,7 +245,7 @@ export function LandSearchForm() {
 
                 <button
                     className="btn-primary"
-                    onClick={() => navigate("/search/results")}
+                    onClick={() => navigate("/tenant/search/results")}
                 >
                     Search
                 </button>
@@ -317,7 +317,7 @@ export function RentSearchForm() {
 
                 <button
                     className="btn-primary"
-                    onClick={() => navigate("/search/results")}
+                    onClick={() => navigate("/tenant/search/results")}
                 >
                     Search
                 </button>
@@ -410,7 +410,7 @@ export function ShortletSearchForm() {
 
                 <button
                     className="btn-primary"
-                    onClick={() => navigate("/search/results")}
+                    onClick={() => navigate("/tenant/search/results")}
                 >
                     Search
                 </button>

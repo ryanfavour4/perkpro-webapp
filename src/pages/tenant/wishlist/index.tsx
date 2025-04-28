@@ -48,7 +48,10 @@ export default function Wishlist() {
 export function WishlistMainContent() {
     return (
         <>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 overflow-y-auto pt-6">
+                <WishListCard />
+                <WishListCard />
+                <WishListCard />
                 <WishListCard />
             </div>
 
@@ -58,9 +61,7 @@ export function WishlistMainContent() {
                     className="size-56 rounded-lg object-cover"
                 />
 
-                <p className="text-center">
-                    You currently have no scheduled events
-                </p>
+                <p className="text-center">You currently have no wishlist</p>
             </div>
         </>
     );
@@ -70,14 +71,14 @@ export const WishListCard = () => {
     const navigate = useNavigate();
 
     return (
-        <div className="p-4 rounded-lg bg-light-100 flex flex-row gap-3 justify-between">
+        <div className="bg-light-100 hover:bg-light-200 border border-dark-100/25  p-4 rounded-lg flex flex-row gap-3 justify-between">
             <div>
                 <img
                     src={listingHouse1}
                     className="w-40 h-36 rounded-lg object-cover"
                 />
             </div>
-            <div className="flex flex-col gap-1 flex-wrap text-wrap w-[55%]">
+            <div className="flex flex-col gap-1 flex-wrap text-wrap w-[75%]">
                 <h4
                     onClick={() => navigate("/tenant/property-details")}
                     className="text-lg font-semibold text-primary-100 flex-wrap text-wrap w-fit self-start"
@@ -102,7 +103,7 @@ export const WishListCard = () => {
                         className="bg-primary-100 py-2 self-start px-3 rounded-md mr-3"
                     >
                         <img
-                            className="w-5 h-5 object-cover"
+                            className="w-5 h-5 object-contain"
                             src={atmCardIcon}
                             alt="Image"
                         />

@@ -50,7 +50,7 @@ export function ChatsMainContent() {
             <div className="relative flex h-[calc(100vh)] overflow-hidden border-2 border-primary-100/25">
                 {/* <!-- Sidebar --> */}
                 <div
-                    className={`lg:w-1/4 bg-white border-r border-gray-300 lg:relative w-full absolute z-10 top-0 bottom-0 lg:translate-x-0 ${listOpen ? "translate-x-0" : "-translate-x-full"}`}
+                    className={`lg:w-1/4 bg-white border-r border-gray-300 lg:relative w-full absolute z-[1] top-0 bottom-0 lg:translate-x-0 ${listOpen ? "translate-x-0" : "-translate-x-full"}`}
                 >
                     {/* <!-- Sidebar Header --> */}
                     <header className="p-2.5 border-b border-light-100 flex justify-between items-center bg-primary-100 text-white">

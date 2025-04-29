@@ -34,7 +34,7 @@ export default function SearchCompanies() {
                 {/* MOBILE div */}
                 <section className="container block px-2 md:hidden pb-5">
                     <div className="col-span-7">
-                        <SearchCompaniesMainContent />;
+                        <SearchCompaniesMainContent />
                     </div>
 
                     {/* BOTTOM TAB BAR */}

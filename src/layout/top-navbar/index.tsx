@@ -171,7 +171,7 @@ export default function TopNavbar({ title }: { title?: string }) {
 
                             <Link
                                 className="btn inline w-fit p-1.5"
-                                to={"/profile"}
+                                to={"/tenant/profile"}
                             >
                                 <UserCircle className="text-3xl md:text-4xl" />
                             </Link>

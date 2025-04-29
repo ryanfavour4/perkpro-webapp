@@ -1,6 +1,8 @@
+import ListThreeLines from "@/components/svg/list-three-lines";
 import MoreDotVertical from "@/components/svg/more-dot-vertical";
 import SideNavbar from "@/layout/side-navbar";
 import TopNavbar from "@/layout/top-navbar";
+import { useState } from "react";
 
 export default function Chats() {
     return (
@@ -26,7 +28,7 @@ export default function Chats() {
                 {/* MOBILE div */}
                 <section className="container block px-2 md:hidden pb-5">
                     <div className="col-span-7">
-                        <ChatsMainContent />;
+                        <ChatsMainContent />
                     </div>
 
                     {/* BOTTOM TAB BAR */}
@@ -40,12 +42,16 @@ export default function Chats() {
 }
 
 export function ChatsMainContent() {
+    const [listOpen, setListOpen] = useState(true);
+
     return (
         <>
             {/* <!-- component --> */}
-            <div className="flex h-[calc(100vh-2rem)] overflow-hidden">
+            <div className="relative flex h-[calc(100vh)] overflow-hidden border-2 border-primary-100/25">
                 {/* <!-- Sidebar --> */}
-                <div className="w-1/4 bg-white border-r border-gray-300">
+                <div
+                    className={`lg:w-1/4 bg-white border-r border-gray-300 lg:relative w-full absolute z-10 top-0 bottom-0 lg:translate-x-0 ${listOpen ? "translate-x-0" : "-translate-x-full"}`}
+                >
                     {/* <!-- Sidebar Header --> */}
                     <header className="p-2.5 border-b border-light-100 flex justify-between items-center bg-primary-100 text-white">
                         <h1 className="text-lg font-semibold">Chat Web</h1>
@@ -81,7 +87,10 @@ export function ChatsMainContent() {
                     {/* <!-- Contact List --> */}
                     <div className="overflow-y-auto h-screen p-3 mb-9 pb-20">
                         {/* CHAT LIST USERS */}
-                        <div className="flex items-center mb-4 cursor-pointer hover:bg-gray-100 p-2 rounded-md">
+                        <div
+                            onClick={() => setListOpen(!listOpen)}
+                            className="flex items-center mb-4 cursor-pointer hover:bg-gray-100 p-2 rounded-md"
+                        >
                             <img
                                 src="https://placehold.co/200x/ffa8e4/ffffff.svg?text=ʕ•́ᴥ•̀ʔ&font=Lato"
                                 alt="User Avatar"
@@ -100,14 +109,17 @@ export function ChatsMainContent() {
                         </div>
 
                         {/* CHAT LIST USERS */}
-                        <div className="flex items-center mb-4 cursor-pointer hover:bg-gray-100 p-2 rounded-md">
+                        <div
+                            onClick={() => setListOpen(!listOpen)}
+                            className="flex items-center mb-4 cursor-pointer hover:bg-gray-100 p-2 rounded-md"
+                        >
                             <img
                                 src="https://placehold.co/200x/ffa8e4/ffffff.svg?text=ʕ•́ᴥ•̀ʔ&font=Lato"
                                 alt="User Avatar"
                                 className="size-8 rounded-full bg-primary-100 border-2 border-primary-100 mr-3"
                             />
                             <div className="flex-1">
-                                <h2 className="font-semibold">Peter Schmidt</h2>
+                                <h2 className="font-semibold">Alice</h2>
                                 <p className="text-text/75 ellipsis">
                                     That pizza place was amazing! We should go
                                     again sometime. 🍕
@@ -123,7 +135,13 @@ export function ChatsMainContent() {
                 {/* <!-- Main Chat Area --> */}
                 <div className="flex-1 relative">
                     {/* <!-- Chat Header --> */}
-                    <header className="bg-dark-50 p-3 text-light">
+                    <header className="bg-dark-50 p-3 text-light flex items-center gap-3">
+                        <button
+                            onClick={() => setListOpen(!listOpen)}
+                            className="btn p-1 w-fit text-light-100 text-2xl lg:hidden"
+                        >
+                            <ListThreeLines />
+                        </button>
                         <h1 className="text-lg font-semibold">Alice</h1>
                     </header>
 

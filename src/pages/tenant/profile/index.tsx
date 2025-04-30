@@ -89,7 +89,7 @@ export function ProfileMainContent() {
                     </div>
 
                     <div className="flex flex-col gap-2.5">
-                        <p className="text-sm">First Name</p>
+                        <p className="text-sm">Last Name</p>
 
                         <h4
                             contentEditable={editable}
@@ -103,7 +103,7 @@ export function ProfileMainContent() {
                     </div>
 
                     <div className="flex flex-col gap-2.5">
-                        <p className="text-sm">First Name</p>
+                        <p className="text-sm">Email</p>
 
                         <h4
                             contentEditable={editable}
